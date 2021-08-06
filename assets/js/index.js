@@ -3,9 +3,7 @@
 import { Animal } from "./Animal.js";
 import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
 
-// import * as Animals from "./Animals.js";
 
-// console.log(Animals);
 (async () => {
   const Response = await fetch("/animales.json");
   const { animales: Animales } = await Response.json();
@@ -22,7 +20,7 @@ import { Leon, Lobo, Oso, Serpiente, Aguila } from "./Animals.js";
   const AnimalCards = [];
 
   nombreAnimalElement.addEventListener("change", () => {
-    // console.log(nombreAnimalElement.value);
+  
     const animalElegido = nombreAnimalElement.value;
 
     const animalEncontrado = Animales.find(
